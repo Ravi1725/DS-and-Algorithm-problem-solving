@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
 
-int last_index(int arr[],int n,int m,int i,int k)
+void last_index(int arr[],int n,int m,int i,int k)
 {
 	//base case
 	if(n==0)
 	{
 		cout<<k<<endl;
-		return k;
+		return;
 	}
 
 	//recursive case
@@ -15,7 +15,7 @@ int last_index(int arr[],int n,int m,int i,int k)
 	{
 		k=i;
 		last_index(arr,n-1,m,i+1,k);
-		cout<<k<<endl;
+		//cout<<k<<endl;
 	}
 
 	last_index(arr,n-1,m,i+1,k);
@@ -31,6 +31,6 @@ int main() {
 		cin>>arr[i];
 	}
 	cin>>m;
-	cout<<last_index(arr,n,m,0,-1);
+	last_index(arr,n,m,0,-1);
 	return 0;
 }
