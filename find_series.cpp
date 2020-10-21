@@ -1,3 +1,5 @@
+//series is combination of fibonacci number and prime number
+//1 2 1 3 2 5 3 7 5 1 1 8 13 13 17
 #include<iostream>
 using namespace std;
 int fibonicci(int num)
